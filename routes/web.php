@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\PageController as AdminPageController;
@@ -24,7 +25,7 @@ Route::middleware(['auth', 'verified'])
   ->name('admin.')
   ->group(function () {
 
-    Route::resource('/', AdminPageController::class);
+    Route::resource('/', ProjectController::class);
 
   });
 
