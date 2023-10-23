@@ -24,7 +24,7 @@ Route::middleware(['auth', 'verified'])
   ->name('admin.')
   ->group(function () {
 
-    Route::get('/', [AdminPageController::class, 'index'])->name('home');
+    Route::resource('/', AdminPageController::class);
 
   });
 
